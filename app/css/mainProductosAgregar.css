@@ -1,0 +1,440 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li{
+  font-family: 'Marcellus', serif;
+  font-size: 100%;
+  color:#c4f2d4;
+}
+.page {
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+}
+
+.section {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  border-width: medium;
+}
+.section2{
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  border-width: medium;
+  padding:10px;
+
+}
+.section3 {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  border-radius: 10px;
+  border-width: medium;
+  padding:10px;
+
+}
+.logo{
+  font-family: 'Libre Barcode 39 Text', cursive;
+  font-size: 200%;
+  color:white;
+  padding: 10px;
+}
+
+
+.menu {
+  background-color: #5eaab2;
+  /*height: 80px;*/
+}
+.sheet{
+  background-color: white;
+  width: 100%;
+}
+.options{
+    background-color: white;
+
+}
+
+
+
+/*XXXXXXXXXXXXX MENU */
+.navigation {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  list-style: none;
+  margin: 0;
+  background: #5eaab2;
+  width: 100%;
+}
+
+.navigation a {
+  text-decoration: none;
+  display: block;
+  padding: 1em;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0);
+  border-bottom: 1px solid rgba(0, 0, 0, 0);
+}
+
+.navigation a:hover {
+  background: white;
+  color:#026776;
+}
+
+.navigation li:last-of-type a {
+  border-bottom: none;
+}
+/*XXXXXXXXXXXXX DESPLEGABLE XXXXXXXXXXXXX*/
+.sidebar{
+  position: absolute;
+  width: 300px;
+  height: 100%;
+  background: #026776;
+  color:#fff;
+  border-radius: 10px;
+  border-width: medium;
+  transition-property:all;
+  transition-duration: 1s;
+}
+.sidebar a{
+
+  font-family: 'Marcellus', serif;
+  font-size: 100%;
+  color:#c4f2d4;
+  display: block;
+  text-decoration: none;
+  padding: 30px;
+}
+
+.sidebar ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar h2{
+  font-family: 'Marcellus', serif;
+  font-size: 200%;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+  background: #5eaab2;
+}
+.sidebar h3{
+  font-family: 'Marcellus', serif;
+  font-size: 150%;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+  background: #5eaab2;
+}
+.sidebar li{
+  border: 1px solid #5eaab2;
+  transition-property:border;
+  transition-duration: 0.3s;
+
+}
+.sidebar li:hover{
+  background:#5eaab2;
+  border-left: 5px solid white;
+}
+.contenido{
+  width:65px;
+  height:65px;
+  position: absolute;
+
+}
+.menu-bar{
+  cursor: pointer;
+}
+.abrir
+{
+  transform: translateX(-400px);
+}
+
+/*XXXXXXXXXXXXX INFO DESPLEGABLE XXXXXXXXXXXXX*/
+.sideinfo{
+  position: absolute;
+  width: 200px;
+  height: 800px;
+  background: white;
+  color: black;
+  border-radius: 10px;
+  border-width: medium;
+  transition-property:all;
+  transition-duration: 1s;
+  border-style: dashed;
+}
+.sideinfo h2{
+  font-family: 'Marcellus', serif;
+  font-size: 100%;
+  color: black;
+  display: block;
+  text-decoration: none;
+  padding: 30px;
+}
+.sideinfo ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.abrir2
+{
+  transform: translateX(-1000px);
+}
+
+
+/*----------------------------------------------------------------------*/
+.footer {
+  display: flex;
+  justify-content: center;
+  flex-direction:column;
+}
+
+.barraI{
+
+  display: flex;
+  padding: 30px;
+
+}
+
+.Texto5{
+  font-size: 25px;
+	font-weight: 100;
+  width:200px;
+  text-align: center;
+}
+.shader{
+
+  width:530px;
+  height: 20px;
+  font-weight: 600;
+  font-size: 15px;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+  display: block;
+}
+.imag{
+  padding: 10px;
+  margin: 1em;
+  width:212px;
+  height: 212px;
+  align-items: center;
+	justify-items: center;
+	align-content: center;
+  cursor: pointer;
+  font-family: 'Marcellus', serif;
+  font-size: 100%;
+  text-align: center;
+  color:#026776;
+  border-style: dashed;
+}
+
+.search {
+  /*estilo*/
+  width:50%;
+  height: 20px;
+	align-items: center;
+	justify-items: center;
+	align-content: center;
+}
+
+.search input{
+  width: 40%;
+  height: 40px;
+  font-family:'Marcellus', serif;
+  font-size: 10px;
+  font-weight: 100;
+  border-radius: 10px;
+  background: white;
+  margin: 0 0 20px;
+  overflow: hidden;
+  padding: 10px;
+  font-style: italic;
+}
+.imag a{
+  font-family:'Marcellus', serif;
+  font-size: 10px;
+  font-weight: 100;
+}
+
+/*XXXXXXXXXXXXXXXXXXXXXXX QUERYS XXXXXXXXXXXXXXXXXXXXXXXXX*/
+/* Mobile Styles */
+@media only screen and (min-width: 301px) and (max-width: 615px) {
+  body {
+    /*background-color: #F09A9D; /* Red */
+  }
+  .contenido
+  .section,
+
+  .section3,
+  .options,
+  .footer,
+  .BarraI,
+  .imag,
+  .sheet{
+    height: 100%;
+  }
+
+  .header {
+    height: 400px;
+  }
+
+  .sideinfo{
+    width: 50%;
+    height: 130%
+
+  }
+
+  .sign-up {
+    height: 200px;
+    order: 1;
+  }
+
+  .navigation {
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+
+  .barraI{
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+  .imag{
+    height: 290px;
+    width: 250px;
+    border-radius: 10px;
+  }
+  .section2,{
+    height: 400%;
+  }
+
+  .menu {
+    height: 100px;
+  }
+  .page{
+    height: 800px;
+  }
+
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+  body {
+    /*background-color: #F5CF8E;*/
+    /* Yellow */
+  }
+  .contenido
+  .section,
+
+  .section3,
+  .options,
+  .footer,
+  .BarraI,
+  .imag,
+  .sheet{
+    height: 100%;
+  }
+
+  .header {
+    height: 400px;
+  }
+
+  .sign-up {
+    height: 200px;
+    order: 1;
+  }
+
+  .navigation {
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+
+  .barraI{
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+  .imag{
+    height: 290px;
+    width: 250px;
+    border-radius: 10px;
+  }
+  .section2,{
+    height: 100%;
+  }
+
+  .menu {
+    height: 100px;
+  }
+  .page{
+    height: 800px;
+  }
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 961px) {
+  body {
+    /*background-color: #B2D6FF;*/
+    /* Blue */
+  }
+  .contenido
+  .section,
+
+  .section3,
+  .options,
+  .footer,
+  .BarraI,
+  .imag,
+  .sheet{
+    height: 100%;
+  }
+
+ .header {
+    height: 400px;
+  }
+
+  .sign-up {
+    height: 200px;
+    order: 1;
+  }
+
+  .navigation {
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+
+  .barraI{
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+  .imag{
+      height: 290px;
+      width: 250px;
+      border-radius: 10px;
+  }
+  .section2,{
+    height: 100%;
+  }
+
+  .menu {
+    height: 80px;
+  }
+  .page{
+    height: 800px;
+  }
+}

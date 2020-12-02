@@ -1,0 +1,80 @@
+<div class="crud" ng-controller="UsersCtrl">
+  <header>
+    <h1 class="">{{appTitle}}</h1>
+  </header>
+
+  <section class="" ng-controller="UsersCtrl">
+    <table id="gridPr" class="tabla" ng-table="usersTable">
+      <thead>
+        <tr>
+
+          <th>Nombre</th>
+          <th>Nombre de Usuario</th>
+          <th>Correo electronico</th>
+          <th>Contraseña</th>
+          <th>Tipo</th>
+          <th></th>
+
+
+        </tr>
+        <tr>
+
+          <th>
+            <input type="text" name="name_new" class="" placeholder="Nombre" ng-model="name">
+          </th>
+          <th>
+            <input type="text" name="ndu_new" class="" placeholder="Nombre de Usuario" ng-model="ndu">
+          </th>
+          <th>
+            <input type="text" name="mail_new" class="" placeholder="Correo electronico" ng-model="mail">
+          </th>
+          <th>
+            <input type="text" name="pass_new" class="" placeholder="Contraseña" ng-model="pass">
+          </th>
+          <th>
+            <input type="text" name="tipo_new" class="" placeholder="Tipo" ng-model="tipo">
+          </th>
+          <th>
+            <button class="btn" ng-click="add()">Añadir</button>
+          </th>
+
+
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr ng-repeat="item in items track by $index">
+
+          <td>
+            <span ng-bind="item.name" ng-if="!item.show"></span>
+            <input type="text" name="name" ng-model="item.name" ng-if="item.show">
+          </td>
+          <td>
+            <span ng-bind="item.ndu" ng-if="!item.show"></span>
+            <input type="text" name="ndu" ng-model="item.ndu" ng-if="item.show">
+          </td>
+          <td>
+            <span ng-bind="item.mail" ng-if="!item.show"></span>
+            <input type="text" name="mail" ng-model="item.mail" ng-if="item.show">
+          </td>
+          <td>
+            <span ng-bind="item.pass" ng-if="!item.show"></span>
+            <input type="text" name="pass" ng-model="item.pass" ng-if="item.show">
+          </td>
+          <td>
+            <span ng-bind="item.tipo" ng-if="!item.show"></span>
+            <input type="text" name="tipo" ng-model="item.tipo" ng-if="item.show">
+          </td>
+          <td>
+            <button class="button" ng-click="change($index)" ng-if="!item.show">Editar</button>
+            <button class="button" ng-click="change($index)" ng-if="item.show">Guardar</button>
+            <button class="button" ng-click="delete($index)">Eliminar</button>
+          </td>
+
+        </tr>
+      </tbody>
+
+    </table>
+  </section>
+
+</div>

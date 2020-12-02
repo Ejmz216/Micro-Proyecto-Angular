@@ -1,0 +1,80 @@
+<div class="crud" ng-controller="ProdCtrl">
+  <header>
+    <h1 class="">{{appTitle}}</h1>
+  </header>
+
+  <section class="" ng-controller="ProdCtrl">
+    <table id="gridPr" class="" ng-table="prodTable">
+      <thead>
+        <tr>
+
+          <th>Producto</th>
+          <th>Proveedor</th>
+          <th>Stock</th>
+          <th>Precio Unitario</th>
+          <th>Codigo</th>
+          <th></th>
+
+
+        </tr>
+        <tr>
+
+          <th>
+            <input type="text" name="prod_new" class="" placeholder="Producto" ng-model="prod">
+          </th>
+          <th>
+            <input type="text" name="ndp_new" class="" placeholder="Proveedor" ng-model="ndp">
+          </th>
+          <th>
+            <input type="text" name="stock_new" class="" placeholder="Stock" ng-model="stock">
+          </th>
+          <th>
+            <input type="text" name="precio_new" class="" placeholder="Precio Unitario" ng-model="precio">
+          </th>
+          <th>
+            <input type="text" name="cod_new" class="" placeholder="Codigo" ng-model="cod">
+          </th>
+          <th>
+            <button class="btn" ng-click="add()">Añadir</button>
+          </th>
+        
+
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr ng-repeat="item in items track by $index">
+
+          <td>
+            <span ng-bind="item.prod" ng-if="!item.show"></span>
+            <input type="text" name="prod" ng-model="item.prod" ng-if="item.show">
+          </td>
+          <td>
+            <span ng-bind="item.ndp" ng-if="!item.show"></span>
+            <input type="text" name="ndp" ng-model="item.ndp" ng-if="item.show">
+          </td>
+          <td>
+            <span ng-bind="item.stock" ng-if="!item.show"></span>
+            <input type="text" name="stock" ng-model="item.stock" ng-if="item.show">
+          </td>
+          <td>
+            <span ng-bind="item.precio" ng-if="!item.show"></span>
+            <input type="text" name="precio" ng-model="item.precio" ng-if="item.show">
+          </td>
+          <td>
+            <span ng-bind="item.cod" ng-if="!item.show"></span>
+            <input type="text" name="cod" ng-model="item.cod" ng-if="item.show">
+          </td>
+          <td>
+            <button class="button" ng-click="change($index)" ng-if="!item.show">Editar</button>
+            <button class="button" ng-click="change($index)" ng-if="item.show">Guardar</button>
+            <button class="button" ng-click="delete($index)">Eliminar</button>
+          </td>
+
+        </tr>
+      </tbody>
+
+    </table>
+  </section>
+
+</div>

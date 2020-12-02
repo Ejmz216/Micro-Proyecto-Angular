@@ -1,0 +1,71 @@
+<div class="crud" ng-controller="ClientCtrl">
+  <header>
+    <h1 class="">{{appTitle}}</h1>
+  </header>
+
+  <section class="" ng-controller="ClientCtrl">
+    <table id="gridPr" class="tabla"  ng-table="clientTable">
+      <thead>
+        <tr>
+
+          <th>Nombre</th>
+          <th>Identificación</th>
+          <th>Cartera</th>
+          <th>Ordenes de trabajo</th>
+          <th></th>
+
+        </tr>
+        <tr>
+
+          <th>
+            <input type="text" name="name_new" class="" placeholder="Nombre" ng-model="name">
+          </th>
+          <th>
+            <input type="text" name="id_new" class="" placeholder="Identificación" ng-model="id">
+          </th>
+          <th>
+            <input type="text" name="cash_new" class="" placeholder="Cartera" ng-model="cash">
+          </th>
+          <th>
+            <input type="text" name="odt_new" class="" placeholder="Ordenes de trabajo" ng-model="odt">
+          </th>
+          <th>
+            <button class="btn" ng-click="add()">Añadir</button>
+          </th>
+
+
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr ng-repeat="item in items track by $index">
+
+          <td>
+            <span ng-bind="item.name" ng-if="!item.show"></span>
+            <input type="text" name="name" ng-model="item.name" ng-if="item.show">
+          </td>
+          <td>
+            <span ng-bind="item.id" ng-if="!item.show"></span>
+            <input type="text" name="id" ng-model="item.id" ng-if="item.show">
+          </td>
+          <td>
+            <span ng-bind="item.cash" ng-if="!item.show"></span>
+            <input type="text" name="cash" ng-model="item.cash" ng-if="item.show">
+          </td>
+          <td>
+            <span ng-bind="item.odt" ng-if="!item.show"></span>
+            <input type="text" name="odt" ng-model="item.odt" ng-if="item.show">
+          </td>
+          <td>
+            <button class="button" ng-click="change($index)" ng-if="!item.show">Editar</button>
+            <button class="button" ng-click="change($index)" ng-if="item.show">Guardar</button>
+            <button class="button" ng-click="delete($index)">Eliminar</button>
+          </td>
+
+        </tr>
+      </tbody>
+
+    </table>
+  </section>
+
+</div>

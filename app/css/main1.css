@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+p {
+  font-family: 'Marcellus', serif;
+  font-size: 150%;
+  color:#c4f2d4;
+}
+
+/*-------------------------------Primera seccion------------------------------*/
+.barra{
+  display: flex;
+  padding: 50px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  flex-wrap: wrap;
+
+}
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+.logo{
+  font-family: 'Libre Barcode 39 Text', cursive;
+  font-size: 600%;
+  color:white;
+  padding: 80px;
+}
+.separador{
+    display: flex;
+    width: 5px;
+    height: 400px;
+    background-color: white;
+}
+.doble{
+    display: flex;
+    padding: 40px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.texto{
+  font-family: 'Marcellus', serif;
+  font-size: 150%;
+  color:#c4f2d4;
+  padding: 10px;
+
+}
+.space {
+  /*estilo*/
+  padding: 40px;
+  width:400px;
+  height: 130px;
+  flex-direction: column;
+	align-items: center;
+	justify-items: center;
+	align-content: center;
+}
+
+input{
+  font-family:'Marcellus', serif;
+  font-size: 18px;
+  font-weight: 200;
+  color: #026776;
+  border-radius: 10px;
+  background: white;
+  margin: 0 0 20px;
+  overflow: hidden;
+  padding: 10px;
+  font-style: italic;
+}
+a.button{
+  -webkit-appearance: button;
+  -moz-appearance: button;
+    appearance: button;
+   font-family:'Marcellus', serif;
+   width: 150px;
+   padding: 10px;
+   font-weight: 200;
+   font-size: 20px;
+   color: black;
+   background-color:white;
+   border-radius: 6px;
+   font-style: italic;
+   text-decoration: none;
+}
+.space2{
+  justify-items: end;
+  padding: 100px;
+  width:400px;
+  height: 130px;
+	align-items: center;
+  padding: 35px;
+	align-content: center;
+}
+
+
+/*-------------------------------Media------------------------------*/
+
+/* Mobile Styles */
+@media only screen and (max-width: 600px) {
+  body {
+    /*background-color: #F09A9D; /* Red */
+  }
+  .barra,
+  .logo,
+  .doble,
+  .texto,
+  .space,
+  .space2,
+  .separador{
+    height: 0%;
+    width: 0%;
+  }
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 601px) and (max-width: 960px) {
+  body {
+    /*background-color: #F5CF8E;*/
+    /* Yellow */
+  }
+  .barra,
+  .logo,
+  .doble,
+  .texto,
+  .space,
+  .space2,
+  .separador,
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 961px) {
+  body {
+    /*background-color: #B2D6FF;*/
+    /* Blue */
+
+  }
+  .barra,
+  .logo,
+  .doble,
+  .texto,
+  .space,
+  .space2,
+}
